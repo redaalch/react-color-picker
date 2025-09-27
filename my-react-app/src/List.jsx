@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function List(props) {
   // fruits.sort((a,b)=>a.name.localeCompare(b.name));//alpha
 
@@ -16,4 +18,18 @@ function List(props) {
     </div>
   );
 }
+List.PropTypes = {
+  category: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      calories: PropTypes.number,
+    })
+  ),
+};
+List.defaultProps = {
+  category: "category",
+  items: [],
+};
 export default List;
