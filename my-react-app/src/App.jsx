@@ -1,9 +1,10 @@
-import Button from "./Button/Button.jsx";
+import PorfilePicture from "./ProfilePicture";
+
 
 function App() {
   return (
     <div>
-      <Button />
+      <PorfilePicture />
     </div>
   );
 }
