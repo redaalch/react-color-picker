@@ -1,8 +1,9 @@
-import Counter from "./Counter.jsx";
+import OnChanges from "./OnChanges";
+
 function App() {
   return (
     <div>
-      <Counter />
+      <OnChanges />
     </div>
   );
 }
