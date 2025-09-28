@@ -1,10 +1,8 @@
-import PorfilePicture from "./ProfilePicture";
-
-
+import Counter from "./Counter.jsx";
 function App() {
   return (
     <div>
-      <PorfilePicture />
+      <Counter />
     </div>
   );
 }
