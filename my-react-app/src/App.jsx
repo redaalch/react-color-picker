@@ -1,9 +1,10 @@
-import OnChanges from "./OnChanges";
+import ColorPicker from "./ColorPicker";
+
 
 function App() {
   return (
     <div>
-      <OnChanges />
+      <ColorPicker />
     </div>
   );
 }

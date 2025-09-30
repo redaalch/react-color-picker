@@ -23,12 +23,14 @@ function OnChanges() {
         type="number"
       />
       <p>Quantity: {quantity}</p>
+
       <textarea
         value={comment}
         onChange={(e) => handleChange(setComment, e)}
         placeholder="leave a comment"
       />
       <p>Comment: {comment}</p>
+
       <select value={payment} onChange={(e) => handleChange(setPayment, e)}>
         <option value="" disabled>
           Select an option
@@ -38,6 +40,7 @@ function OnChanges() {
         <option value="GiftCard">GiftCard</option>
       </select>
       <p>Payment: {payment}</p>
+
       <label>
         <input
           type="radio"
