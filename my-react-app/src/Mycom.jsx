@@ -1,27 +1,36 @@
-import React, {  useState } from "react";
-function Mycom() {
-  const [name, setName] = useState("Guest");
-  const [age, setAge] = useState(0);
-  const [isEmployed, setIsEmployed] = useState(false);
-  const updateName = () => {
-    setName("reda");
-  };
-  const incrementAge = () => {
-    setAge(age + 1);
-  };
-  const toggleEmployedStatus = () => {
-    setIsEmployed(!isEmployed);
+import React, { useState } from "react";
+function Mycomponent() {
+  const [car, setCar] = useState({
+    year: 2024,
+    make: "ford",
+    model: "mustang",
+  });
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    setCar((c) => ({
+      ...c,
+      [name]: type === "number" ? Number(value) : value,
+    }));
   };
   return (
     <div>
-      <p>Name: {name}</p>
-      <button onClick={updateName}>Change name</button>
-
-      <p>Age: {age}</p>
-      <button onClick={incrementAge}>Increment</button>
-      <p>Employed: {isEmployed ? "true" : "false"}</p>
-      <button onClick={toggleEmployedStatus}>Toggle</button>
+      <p>
+        Your favorite car is: {car.year} {car.make} {car.model}
+      </p>
+      <input
+        type="number"
+        name="year"
+        value={car.year}
+        onChange={handleChange}
+      />
+      <input type="text" name="make" value={car.make} onChange={handleChange} />
+      <input
+        type="text"
+        name="model"
+        value={car.model}
+        onChange={handleChange}
+      />
     </div>
   );
 }
-export default Mycom;
+export default Mycomponent;
