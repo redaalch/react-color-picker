@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
-  const increament = () => {
-    setCount(count + 1);
+  const increment = () => {
+    setCount((c) => c + 1);
   };
-  const decreament = () => {
-    setCount(count - 1);
+  const decrement = () => {
+    setCount((c) => c - 1);
   };
   const reset = () => {
     setCount(0);
@@ -15,14 +15,14 @@ function Counter() {
   return (
     <div className="counter-container">
       <h1 className="count-display">{count}</h1>
-      <button className="counter-button" onClick={increament}>
-        increament
+      <button className="counter-button" onClick={increment}>
+        increment
       </button>
       <button className="counter-button" onClick={reset}>
         reset
       </button>
-      <button className="counter-button" onClick={decreament}>
-        decreament
+      <button className="counter-button" onClick={decrement}>
+        decrement
       </button>
     </div>
   );
